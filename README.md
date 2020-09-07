@@ -1,2 +1,3 @@
 # vue-dynamic-height
-A Vue plugin to let the height of your textarea component dynamic.
+
+A light weight Vue plugin to let the height of your textarea component dynamic.
