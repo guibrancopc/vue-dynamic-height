@@ -1,15 +1,15 @@
 import dynamicHeight from './dynamic-height/dynamicHeight';
 
 // Declare install function executed by Vue.use()
-export function installDynamicHeight(Vue) {
-  if (installDynamicHeight.installed) return;
-  installDynamicHeight.installed = true;
+export function installVueDynamicHeight(Vue) {
+  if (installVueDynamicHeight.installed) return;
+  installVueDynamicHeight.installed = true;
   Vue.directive('DynamicHeight', dynamicHeight);
 }
 
 // Create module definition for Vue.use()
 const plugin = {
-  installDynamicHeight,
+  installVueDynamicHeight,
 };
 
 // Auto-install when vue is found (eg. in browser via <script> tag)
