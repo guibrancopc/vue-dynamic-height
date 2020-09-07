@@ -23,6 +23,7 @@
     "url": "https://github.com/guibrancopc/vue-dynamic-height/issues"
   },
   "homepage": "https://github.com/guibrancopc/vue-dynamic-height#readme",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/plugin-proposal-optional-chaining": "^7.8.3",
