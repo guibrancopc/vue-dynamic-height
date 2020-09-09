@@ -52,10 +52,64 @@ Vue.use(installVueDynamicHeight);
 
 ### Usage
 
+#### Simple one
 ```vue
 <template>
-  <textarea v-dynamic-height="configObject"></textarea>
+  <textarea v-dynamic-height></textarea>
 </template>
+```
+
+#### Custom setup
+
+```vue
+<template>
+  <textarea v-dynamic-height="{ disabled: false, minHeight: '100px' }"></textarea>
+</template>
+```
+
+#### Turn height calc reactive
+
+> It might not not be the most beautiful way to do it, but it seems to be a good and efficient way.
+
+The point is just trigger an native `input` event every time the `value` prop updates.
+
+```vue
+<template>
+  <textarea
+    ref="textarea"
+    :value="value"
+    @input="onInput"
+    v-dynamic-height></textarea>
+</template>
+
+<script>
+import DynamicHeight from 'vue-dynamic-height';
+
+export default {
+  name: 'MyTextareaComponent',
+  directives: {
+    DynamicHeight,
+  },
+  props: {
+    value: String,
+  },
+  watch: {
+    value() {
+      this.triggerEventToDynamicHeight();
+    },
+  },
+  methods: {
+    triggerEventToDynamicHeight() {
+      this.$nextTick(() => {
+        this.$refs.textarea.dispatchEvent(new Event('input'));
+      });
+    },
+    onInput(event) {
+      this.$emit('input', event.target.value);
+    },
+  },
+};
+</script>
 ```
 
 ## Contribution 🚀 
