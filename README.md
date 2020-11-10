@@ -1,5 +1,8 @@
 # vue-dynamic-height
 
+![pull-request-analyser](https://github.com/guibrancopc/vue-dynamic-height/workflows/pull-request-analyser/badge.svg)
+![npm-publisher](https://github.com/guibrancopc/vue-dynamic-height/workflows/npm-publisher/badge.svg)
+
 A light weight Vue plugin to let the height of your textarea component dynamic.
 
 ## Demonstration 👀 
