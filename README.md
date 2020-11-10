@@ -32,7 +32,7 @@ export default {
 </script>
 ```
 
-### Use globally 🌐 
+### Use globally 🌐
 
 ```js
 import Vue from 'vue';
