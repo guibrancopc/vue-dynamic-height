@@ -110,4 +110,8 @@ describe('Dynamic Height Directive', () => {
     dynamicHeight.bind(el, binding);
     expect(options.target.style.height).toBe('50px');
   });
+  
+  it('this is a fake failing test just to test CI with GitHub Actions', () => {
+    expect(1).toBe(2);
+  });
 });
