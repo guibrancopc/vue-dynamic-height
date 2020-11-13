@@ -10,7 +10,7 @@ A light weight Vue plugin to let the height of your textarea component dynamic.
 ![Vue Dynamic Height Sample](https://user-images.githubusercontent.com/11657454/92419946-e75f2b00-f146-11ea-88dd-2f6357e2ace9.gif)
 
 
-## How to 🤔 
+## How to use :wink: 
 
 ```
 npm install --save vue-dynamic-height
@@ -35,7 +35,7 @@ export default {
 </script>
 ```
 
-### Use globally 🌐 
+### Use globally 🌐
 
 ```js
 import Vue from 'vue';
