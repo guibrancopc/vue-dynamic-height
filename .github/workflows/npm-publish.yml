@@ -10,6 +10,7 @@ on:
 
 jobs:
   build:
+    name: Building App
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -17,9 +18,11 @@ jobs:
         with:
           node-version: 12
       - run: npm ci
+      - run: npm run lint
       - run: npm test
 
   publish-npm:
+    name: Publishing on NPM
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -36,6 +39,7 @@ jobs:
       - run: git config --global user.email "bot@guicarvalho.com.br"
       - run: npm version ${{ github.event.release.tag_name }}
       - run: npm run build
+      - run: npm run lint
       - run: npm test
       - run: npm publish
         env:

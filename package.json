@@ -5,7 +5,8 @@
   "main": "dist/vue-dynamic-height.umd.js",
   "scripts": {
     "build": "webpack --config webpack.config.js --production",
-    "test": "jest --notify --config=jest.config.js"
+    "test": "jest --notify --config=jest.config.js",
+    "lint": "eslint \"src/**/*.{js,vue}\""
   },
   "repository": {
     "type": "git",

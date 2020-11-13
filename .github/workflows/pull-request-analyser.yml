@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    name: Running Units Tests
+    name: Running Linter & Tests
     runs-on: ubuntu-latest
 
     steps:
@@ -17,7 +17,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Install
+    - name: Install Dependencies
       run: npm install
-    - name: Test
+    - name: Apply Linter
+      run: npm run lint
+    - name: Run Tests
       run: npm test
