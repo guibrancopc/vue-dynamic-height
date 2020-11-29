@@ -1,5 +1,5 @@
 function setOverflowHidden(el) {
-  el.style.overflow = 'hidden';
+  el.style.overflow = 'hidden'
 }
 
 function setMinHeightWhenRequested(el, binding) {
