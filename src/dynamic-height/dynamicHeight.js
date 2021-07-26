@@ -26,9 +26,11 @@ export default {
     setMinHeightWhenRequested(el, binding);
     initElementHeight(el);
     el.addEventListener('input', updateElementHeight);
+    window.addEventListener('resize', () => updateElementHeight({ target: el }));
   },
   unbind: (el, binding) => {
     if (binding.value?.disabled) { return; }
     el.removeEventListener('input', updateElementHeight);
+    window.removeEventListener('resize', () => updateElementHeight({ target: el }));
   },
 };
